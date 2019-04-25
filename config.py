@@ -1,12 +1,8 @@
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-DB_URI= "mysql://{username}:{password}@{hostname}/{databasename}".format(
-    username='b8d3434ce00428',
-    password='5cc30799',
-    hostname='eu-cdbr-west-02.cleardb.net',
-    databasename='heroku_f712014e253e29c'
-)
+DB_URI= "mysql://b8d3434ce00428:5cc30799@eu-cdbr-west-02.cleardb.net/heroku_f712014e253e29c?reconnect=true"
+   
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
