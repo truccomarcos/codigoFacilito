@@ -2,10 +2,10 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 DB_URI= "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username='root',
-    password='lala123',
-    hostname='localhost:3306',
-    databasename='capacitaciones'
+    username='b8d3434ce00428',
+    password='5cc30799',
+    hostname='eu-cdbr-west-02.cleardb.net',
+    databasename='heroku_f712014e253e29c'
 )
 
 class Config(object):
