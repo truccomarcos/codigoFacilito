@@ -1,7 +1,7 @@
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-DB_URI= "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+DB_URI= "mysql://{username}:{password}@{hostname}/{databasename}".format(
     username='b8d3434ce00428',
     password='5cc30799',
     hostname='eu-cdbr-west-02.cleardb.net',
