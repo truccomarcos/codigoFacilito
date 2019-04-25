@@ -1,7 +1,7 @@
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-DB_URI= "mysql://b8d3434ce00428:5cc30799@eu-cdbr-west-02.cleardb.net/heroku_f712014e253e29c?reconnect=true"
+DB_URI= "mysql://b8d3434ce00428:5cc30799@eu-cdbr-west-02.cleardb.net/heroku_f712014e253e29c"
    
 
 class Config(object):
