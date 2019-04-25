@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contenedorcard">
+<div class="demo-card-wide mdl-card carta" >
+        <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text titulo">Capacitacion</h2>
+        </div>
+    <form action="" method="POST" novalidate autocomplete="off">
+        {{ form.hidden_tag() }}
+        <div class="mdl-textfield mdl-js-textfield">
+            {% if session['role'] == 2 %}
+            <div class="mdl-textfield__input">{{ form.name.label }} {{ form.name(class="rectangulos") }}</div>
+            {%endif%}
+            <div class="mdl-textfield__input" >{{ form.start.label }} {{ form.start(class="rectangulos",id="datepicker1") }}</div>
+            <div class="mdl-textfield__input">{{ form.end.label }} {{ form.end(class="rectangulos",id="datepicker2") }}</div>
+            {% if session['role'] == 2 %}
+            <div class="mdl-textfield__input" >{{ form.description.label }} {{ form.description(class="rectangulos") }}</div>
+            {%endif%}
+            <div class="mdl-textfield__input" >{{ form.comments.label }} {{ form.comments(class="rectangulos") }}</div>
+            <div class="mdl-textfield__input" >{{ form.times.label }} {{ form.times(class="rectangulos select") }}</div>
+            <div class="mdl-textfield__input" >{{ form.department.label }} {{ form.department(class="rectangulos select") }}</div>
+
+        </div>
+        <input  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Enviar">
+    </form>
+</div>
+</div>
+<script>
+    
+    $("#datepicker1").datepicker({
+        dateFormat: "yy/mm/dd"
+    });
+   
+    $("#datepicker2").datepicker({
+        dateFormat: "yy/mm/dd"
+    });
+
+</script>
+{% endblock %}
